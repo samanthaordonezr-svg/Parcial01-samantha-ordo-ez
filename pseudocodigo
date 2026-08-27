@@ -1,3 +1,4 @@
+
 Algoritmo CajeroUNICORSALUD
 	Definir nombre Como Cadena
 	Definir valorRetiro Como Real
@@ -22,7 +23,9 @@ Algoritmo CajeroUNICORSALUD
 	SiNo
 		nombreCuenta <- "Cuenta de Ahorros"
 	FinSi
-	
+	si (tipoCuenta <1 O tipoCuenta>2) Entonces
+		Escribir "ERROR DE CUENTA"
+	FinSi
 	sucursal <- "Unicorsalud sede2"
     saldoActual <- 435000
     fecha <- "30/08/2026 15:30:15"
