@@ -1,0 +1,56 @@
+Algoritmo CajeroUNICORSALUD
+	Definir nombre Como Cadena
+	Definir valorRetiro Como Real
+	Definir saldoActual Como Real
+    Definir saldoRestante como Real
+    Definir fecha Como Cadena
+    Definir operacion Como Cadena
+    Definir tipoCuenta Como Entero
+	Definir nombreCuenta Como Cadena
+    Definir sucursal Como Cadena
+
+	
+   
+    operacion <- "Retiro de dinero"
+    
+	Escribir "Seleccione el tipo de cuenta:"
+	Escribir "1. Cuenta Corriente"
+	Escribir "2. Cuenta de Ahorros"
+	Leer tipoCuenta
+	Si (tipoCuenta = 1) Entonces
+		nombreCuenta <- "Cuenta de Corriente"
+	SiNo
+		nombreCuenta <- "Cuenta de Ahorros"
+	FinSi
+	
+	sucursal <- "Unicorsalud sede2"
+    saldoActual <- 435000
+    fecha <- "30/08/2026 15:30:15"
+    
+    Escribir "Ingrese el monto a retirar: "
+    Leer valorRetiro
+	
+  
+    Si valorRetiro > saldoActual Entonces
+        Escribir "Error: El monto a retirar es mayor que el saldo disponible."
+    SiNo
+        Escribir "Retiro aceptado. Procesando transacción..."        
+        saldoRestante <- saldoActual - valorRetiro        
+    FinSi
+    
+  Escribir "Espere su comprobante"
+    Escribir "******************************"
+    Escribir "  COMPROBANTE de TRANSACCIÓN  "
+    Escribir "******************************"
+    Escribir "ID TX: ", "MICH1234"
+    Escribir "Fecha: ", fecha
+    Escribir "Operación: ", operacion , " - ", nombreCuenta
+    Escribir "Sucursal: ", sucursal
+    Escribir "Valor Retirado: $", valorRetiro
+    Escribir "Saldo Restante: $", saldoActual - valorRetiro
+	Escribir "Gracias por su retiro"
+    Escribir "******************************"
+	
+	
+	
+FinAlgoritmo
